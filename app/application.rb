@@ -6,7 +6,7 @@ class Application
 
     if req.path=="/items/<ITEM NAME>"
       resp.write @@items[0].price
-    # elsif 
+    # elsif
     #     resp.write "Item not found"
     #     resp.status = 400
     #   end
