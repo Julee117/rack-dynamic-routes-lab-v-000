@@ -1,4 +1,4 @@
-class Application 
+class Application
 
   def call(env)
     resp = Rack::Response.new
@@ -6,10 +6,10 @@ class Application
 
     if req.path=="/items/<ITEM NAME>"
       resp.write "#{item.price}"
-    else 
+    else
       resp.write "Route not found"
       resp.statue = 400
-    end 
+    end
     resp.finish
   end
 end
