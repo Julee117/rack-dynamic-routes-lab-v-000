@@ -5,8 +5,8 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path=="/items/<ITEM NAME>"
-      if @@items.include?(item.name)
-        resp.write "#{item.name.price}"
+      if @@items.include?(item)
+        resp.write "#{item.price}"
       else
         resp.write "Item not found"
         resp.status = 400
