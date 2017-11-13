@@ -5,7 +5,9 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path=="/items/<ITEM NAME>"
-      resp.write @@items[0].price
+      found_item = req.path.split("/items/").last
+      item = @@items.find{|i| i.name == found_item}
+      resp.write item.price
     # elsif
     #     resp.write "Item not found"
     #     resp.status = 400
