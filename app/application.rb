@@ -4,8 +4,8 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path.match(/items/<ITEM NAME>)
-      if @@items.include?(item)
+    if req.path=="/items/<ITEM NAME>"
+      if @@items.include?(item.name)
         resp.write "#{item.price}"
       else
         resp.write "Item not found"
