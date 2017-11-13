@@ -8,7 +8,7 @@ class Application
       resp.write "#{item.price}"
     else
       resp.write "Route not found"
-      resp.statue = 404
+      resp.status = 404
     end
     resp.finish
   end
